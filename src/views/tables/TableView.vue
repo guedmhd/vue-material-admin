@@ -8,7 +8,7 @@ import UserForm from '@/components/forms/UserForm.vue';
 
 const { t } = useLocale();
 const itemsPerPage = ref(10);
-const showFilter = ref(true);
+const showFilter = ref(false);
 const showDialog = ref(false);
 const users = ref<IUser[]>([]);
 const userStore = useUserStore();
