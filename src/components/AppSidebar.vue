@@ -111,13 +111,14 @@ const drawerProps = reactive({
   icon: 'mdi-arrow-left'
 });
 
-const handleDrawerWidth = () => {
+/*const handleDrawerWidth = () => {
   const rail = drawerProps.rail;
   const railWidth = drawerProps.railWidth;
   drawerProps.rail = !rail;
   drawerProps.railWidth = railWidth == 64 ? 256 : 64;
   drawerProps.icon = drawerProps.railWidth === 256 ? 'mdi-arrow-expand-left  ' : 'mdi-arrow-expand-right';
 };
+*/
 
 const menus = computed(() => {
   if (drawerProps.railWidth === 256) {
