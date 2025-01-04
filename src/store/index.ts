@@ -5,6 +5,7 @@ import { createPinia, type Pinia } from 'pinia';
 import { useUserStore } from '@/store/userStore';
 import { useSnackbarStore } from '@/store/snackbarStore';
 import { useCalendarStore } from '@/store/eventStore';
+import { useDrawerStore } from '@/store/drawerStore';
 
 /** Pinia Store */
 const pinia: Pinia = createPinia();
@@ -12,4 +13,4 @@ pinia.use(piniaPluginPersistedstate);
 
 export default pinia;
 
-export { useUserStore, useCalendarStore, useSnackbarStore };
+export { useUserStore, useCalendarStore, useSnackbarStore, useDrawerStore };

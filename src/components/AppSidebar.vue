@@ -2,8 +2,10 @@
 import Logo from '@/components/Logo.vue';
 import { reactive, computed } from 'vue';
 import { useLocale } from 'vuetify';
+import { useDrawerStore } from '@/store';
 
 const { t } = useLocale();
+const useDrawer = useDrawerStore();
 const items = [
   { type: 'subheader', title: t('apps') },
   {
@@ -129,7 +131,13 @@ const menus = computed(() => {
 </script>
 
 <template>
-  <VNavigationDrawer :rail-width="drawerProps.railWidth" :rail="drawerProps.rail" :border="true" :elevation="1">
+  <VNavigationDrawer
+    v-model="useDrawer.getDrawer"
+    :rail-width="drawerProps.railWidth"
+    :rail="drawerProps.rail"
+    :border="true"
+    :elevation="1"
+  >
     <VToolbar class="px-3" color="transparent">
       <Logo :height="26" />
       <VToolbarTitle>Materiv</VToolbarTitle>
