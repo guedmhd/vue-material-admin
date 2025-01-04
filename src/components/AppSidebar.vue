@@ -133,10 +133,11 @@ const menus = computed(() => {
 <template>
   <VNavigationDrawer
     v-model="useDrawer.getDrawer"
-    :rail-width="drawerProps.railWidth"
-    :rail="drawerProps.rail"
-    :border="true"
+    permanent
+    hide-overlay
     :elevation="1"
+    :location="$vuetify.display.mobile ? 'bottom' : undefined"
+    :border="true"
   >
     <VToolbar class="px-3" color="transparent">
       <Logo :height="26" />
@@ -145,15 +146,6 @@ const menus = computed(() => {
     <div class="app-drawer__inner">
       <VList :items="menus" color="primary" class="menu-list" nav :slim="true" />
     </div>
-    <VBtn
-      class="btn-collapse"
-      rounded="lg"
-      color="white"
-      size="x-small"
-      :icon="drawerProps.icon"
-      @click="handleDrawerWidth"
-      :style="{ left: drawerProps.railWidth - 12 + 'px' }"
-    />
   </VNavigationDrawer>
 </template>
 

@@ -11,7 +11,7 @@ const useDrawer = useDrawerStore();
 <template>
   <!------Header-------->
   <VAppBar :elevation="10">
-    <VAppBarNavIcon @click="useDrawer.setDrawer" />
+    <VAppBarNavIcon @click.stop="useDrawer.setDrawer" />
     <VSpacer />
     <!-- Notification -->
     <NotificationDropdown />
