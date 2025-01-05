@@ -142,7 +142,7 @@ const menus = computed(() => {
   >
     <VToolbar class="px-3" color="transparent">
       <Logo :height="26" />
-      <VToolbarTitle>Materiv</VToolbarTitle>
+      <VToolbarTitle>EtoE-UI</VToolbarTitle>
     </VToolbar>
     <div class="app-drawer__inner">
       <VList :items="menus" color="primary" class="menu-list" nav :slim="true" />

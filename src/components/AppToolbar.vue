@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import NotificationDropdown from './dropdown/NotificationDropdown.vue';
-import ProfileDropdown from './dropdown/ProfileDropdown.vue';
+//import NotificationDropdown from './dropdown/NotificationDropdown.vue';
+//import ProfileDropdown from './dropdown/ProfileDropdown.vue';
 import { useDrawerStore } from '@/store';
 
 // dropdown imports
@@ -14,7 +14,8 @@ const useDrawer = useDrawerStore();
     <VAppBarNavIcon @click.stop="useDrawer.setDrawer" />
     <VSpacer />
     <!-- Notification -->
-    <NotificationDropdown />
+    <!--<NotificationDropdown />
     <ProfileDropdown />
+    -->
   </VAppBar>
 </template>
